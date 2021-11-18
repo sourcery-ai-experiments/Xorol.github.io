@@ -61,7 +61,7 @@ a.plain {
 }
 
 .active-dropbtn {
-  background-color: green;
+  background-color: #EA7200;
   font-size: 16px;
   border: none;
   outline: none;
@@ -87,8 +87,4 @@ a.plain {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-a.plain {
-  color: #FFA200;
 }
