@@ -100,3 +100,19 @@ th, td {
 }
 
 tr:nth-child(even) {background-color: #333;}
+
+input[type="text"], textarea {
+  background-color: #333;
+  color: #ddd;
+}
+
+ button.plain {
+  background-color: #333; 
+  border: 3px solid #ddd;
+  color: #ddd;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
