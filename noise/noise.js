@@ -1,37 +1,13 @@
-var canvas = document.getElementById('canvas'),
-    ctx = canvas.getContext('2d');
-
-function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resize();
-window.onresize = resize;
-
-function noise(ctx) {
-    
-    var w = ctx.canvas.width,
-        h = ctx.canvas.height,
-        idata = ctx.createImageData(w, h),
-        buffer32 = new Uint32Array(idata.data.buffer),
-        len = buffer32.length,
-        i = 0;
-
-    for(; i < len;)
-        buffer32[i++] = ((255 * Math.random())|0) << 24;
-    
-    ctx.putImageData(idata, 0, 0);
+// noprotect
+function setup() {
+  createCanvas(window.innerWidth, window.innerHeight);
 }
 
-var toggle = true;
-
-// added toggle to get 30 FPS instead of 60 FPS
-(function loop() {
-    toggle = !toggle;
-    if (toggle) {
-        requestAnimationFrame(loop);
-        return;
+function draw() {
+  for (var x = 0; x <= canvas.width; x++) {
+    for (var y = 0; y <= canvas.width; y++) {
+      set(x, y, Math.floor(Math.random() * 256));
     }
-    noise(ctx);
-    requestAnimationFrame(loop);
-})();
+  }
+  updatePixels();
+}
