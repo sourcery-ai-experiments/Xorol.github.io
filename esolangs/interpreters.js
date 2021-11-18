@@ -163,3 +163,51 @@ function interpretNumbers() {
 
   document.getElementById("numbers-out").innerHTML = output;
 }
+
+function interpretpP() {
+  var program = document.getElementById("pp-in").value;
+  var output = "";
+  for (var i = 0; i <= program.length - 1; i++) {
+    var command = program[i];
+    if (command != "p") {
+      break;
+    } else if (command === "p") {
+      output += "Hello, world!\n"
+    }
+  }
+  document.getElementById("pp-out").innerHTML = output;
+}
+
+function interpretDeadfish() {
+  var program = document.getElementById("><x>-in").value;
+  var accum = 0;
+  var output = "";
+  var quit = false;
+
+  for (var i = 0; i < program.length - 1; i++) {
+    if (quit) {
+      break;
+    }
+    switch (program[i]) {
+      case "i":
+        //increment
+        accum++;
+        break;
+      case "d":
+        //decrement
+        accum--;
+      case "h":
+        //halt
+        quit = true;
+        break;
+      case "o":
+        //output
+        output +=  "\n" + accum.toString();
+        break;
+      case "s":
+        accum ^= 2;
+        break;
+    }
+  }
+  document.getElementById("><x>-out").innerHTML = output;
+}
