@@ -77,3 +77,11 @@ a.plain {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+button.active {
+  background-color: #EA7200;
+}
+
+a.plain {
+  color: #FFA200;
+}
