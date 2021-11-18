@@ -28,7 +28,7 @@
     </div>
   </div>	</div>
   <h1>Numbers</h1>
-  <p>Numbers is an <a href="../esolangs.html">esolang</a> that I made centered around the fact that all commands are numbers (except for one). You can see its page on the Esolangs Wiki <a href="https://www.esolangs.org/wiki/Numbers">here.</a></p>
+  <p>Numbers is an <a href="esolangs.html" class="plain">esolang</a> that I made centered around the fact that all commands are numbers (except for one). You can see its page on the Esolangs Wiki <a href="https://www.esolangs.org/wiki/Numbers" class="plain">here.</a></p>
   <h2> What are the commands?</h2>
   <p>Assuming you know how these things work, it is stack-based and has 29 commands split into four categories.</p>
   <h3>Category 1: Operations</h3>
@@ -44,6 +44,40 @@
                   <tr><td>17</td><td>Decrements the top value on the stack</td></tr>
                     <tr><td>18</td><td>Finds the Digital Root of the top value on the stack</td></tr>
                       <tr><td>19</td><td>Finds the factorial of the top value on the stack</td></tr>
+  </table>
+	<h3>Category 2: Stack Manipulation</h3>
+	<p>Don't be worried by that title, these are just commands that do things to the actual stack or the order of the items in the stack.</p>
+	<table>
+    <tr><th>Command</th><th>Action</th></tr>
+    <tr><td>20</td><td>Pushes its following value onto the stack</td></tr>
+      <tr><td>21</td><td>Reverses the stack</td></tr>
+        <tr><td>22</td><td>Swaps the top two values on the stack</td></tr>
+          <tr><td>23</td><td>Discards the top value on the stack</td></tr>
+		<tr><td>24</td><td>Sets the Control Accumulator to the top value on the stack and discards it</td></tr>
+		<tr><td>25</td><td>Pushes the Control Accumulator's value onto the stack</td></tr>
+		<tr><td>26</td><td>Duplicates the top value on the stack</td></tr>
+            <tr><td>27</td><td>Clears the stack</td></tr>
+  </table>
+	<h3>Category 3: Input/Output</h3>
+	<table>
+    <tr><th>Command</th><th>Action</th></tr>
+    <tr><td>30</td><td>Outputs the first item on the stack</td></tr>
+      <tr><td>31</td><td>Outputs the first item on the stack as an ASCII character</td></tr>
+        <tr><td>32</td><td>Outputs the entire stack in the format "1st-item 2nd-item 3rd-item"</td></tr>
+          <tr><td>33</td><td>Outputs the entire stack as an ASCII string</td></tr>
+		<tr><td>34</td><td>Takes input from the user as an integer and pushes it onto the stack</td></tr>
+		<tr><td>35</td><td>Takes input from the user as an ASCII character and pushes its ASCII value onto the stack</td></tr>
+		<tr><td>36</td><td>Takes input from the user as an ASCII string and pushes each character's ASCII value onto the stack</td></tr>
+  </table>
+	<h3>Category 4: Control Flow</h3>
+	<p>These are commands that control the flow of the program</p>
+	<table>
+    <tr><th>Command</th><th>Action</th></tr>
+    <tr><td>40</td><td>Only does the next instruction if the Control Accumulator is not 0</td></tr>
+      <tr><td>41</td><td>Only does the next instruction if the Control Accumulator is 0</td></tr>
+        <tr><td>42</td><td>Goto</td></tr>
+          <tr><td>43</td><td>Repeats the program</td></tr>
+		<tr><td>~</td><td>Halts/Ends the program</td></tr>
   </table>
 </body>
 </html>
