@@ -60,6 +60,17 @@ a.plain {
   z-index: 1;
 }
 
+.active-dropbtn {
+  background-color: green;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0; 
+}
+
 .dropdown-content a {
   float: none;
   color: #ddd;
@@ -76,10 +87,6 @@ a.plain {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-button.active {
-  background-color: #EA7200;
 }
 
 a.plain {
