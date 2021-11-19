@@ -13,6 +13,10 @@ function draw() {
 }
 
 function mousePressed() {
-  noCursor() ? cursor : cursor();
-  cursor ^= true;
+  if (cursorShown) {
+    noCursor();
+  } else {
+    cursor();
+  }
+  cursorShown ^= true;
 }
