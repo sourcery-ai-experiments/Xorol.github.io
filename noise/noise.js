@@ -1,3 +1,4 @@
+cursor = true;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
 }
@@ -9,4 +10,9 @@ function draw() {
     }
   }
   updatePixels();
+}
+
+function mousePressed() {
+  noCursor() ? cursor : cursor();
+  cursor ^= true;
 }
