@@ -6,7 +6,7 @@ function setup() {
 
   //Load the sound file (using a source element for expandability)
   var src = document.createElement("source");
-  src.src = fileName + ".mp3";
+  src.src =  "../tv-static-01.mp3";
   soundFile.appendChild(src);
   //Load the audio tag
   //It auto plays as a fallback
