@@ -24,10 +24,10 @@ function draw() {
     }
   }
   updatePixels();
-  playStatic();
+  playStatic(soundFile);
 }
 
-function playStatic() {
+function playStatic(soundFile) {
    //Set the current time for the audio file to the beginning
    soundFile.currentTime = 0.01;
    soundFile.volume = 100;
