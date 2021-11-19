@@ -1,7 +1,7 @@
 // noprotect
+var soundFile = document.createElement("audio");
 function setup() {
   //Create the audio tag
-  var soundFile = document.createElement("audio");
   soundFile.preload = "auto";
 
   //Load the sound file (using a source element for expandability)
