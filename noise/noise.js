@@ -30,7 +30,7 @@ function draw() {
 function playStatic() {
    //Set the current time for the audio file to the beginning
    soundFile.currentTime = 0.01;
-   soundFile.volume = volume;
+   soundFile.volume = 100;
 
    //Due to a bug in Firefox, the audio needs to be played after a delay
    setTimeout(function(){soundFile.play();},1);
