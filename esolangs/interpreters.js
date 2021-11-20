@@ -229,10 +229,13 @@ $("select").change(function(){
   switch (language) {
     case "numbers":
       button.onclick = function(){interpretNumbers()};
+      break;
     case "><x>":
       button.onclick = function(){interpretDeadfish()};
+      break;
     case "pp":
       button.onclick = function(){interpretpP();}
+      break;
   }
   document.body.appendChild(text);
   document.body.appendChild(document.createElement("br"));
