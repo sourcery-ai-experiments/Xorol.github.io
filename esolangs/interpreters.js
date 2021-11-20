@@ -235,6 +235,8 @@ $("select").change(function(){
       button.onclick = "interpretpP()";
   }
   document.body.appendChild(text);
+  document.body.appendChild(document.createElement("br"));
   document.body.appendChild(button);
+  document.body.appendChild(document.createElement("br"));
   document.body.appendChild(output);
 });
