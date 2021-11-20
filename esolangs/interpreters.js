@@ -211,3 +211,30 @@ function interpretDeadfish() {
   }
   document.getElementById("><x>-out").innerHTML = output;
 }
+
+$("select").change(function(){
+  const language = $(this).val();
+  const text = document.createElement("textarea");
+  text.id = language + "-in";
+  text.placeholder = "Code here...";
+  text.cols = 250;
+  text.rows = 4;
+  const button = document.createElement("button")
+  button.id = "plain";
+  button.innerHTML = "Interpret!";
+  button.classList.add("plain");
+  const output = document.createElement("p");
+  output.innerHTML = "Output here...";
+  output.id = language + "-out";
+  switch (language) {
+    case "numbers":
+      button.onclick = "interpretNumbers()";
+    case "><x>":
+      button.onclick = "interpretDeadfish()";
+    case "pp":
+      button.onclick = "interpretpP()";
+  }
+  document.body.appendChild(text);
+  document.body.appendChild(button);
+  document.body.appendChild(output);
+});
