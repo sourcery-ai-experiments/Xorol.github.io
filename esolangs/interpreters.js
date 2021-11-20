@@ -228,11 +228,11 @@ $("select").change(function(){
   output.id = language + "-out";
   switch (language) {
     case "numbers":
-      button.onclick = "interpretNumbers()";
+      button.onclick = function(){interpretNumbers()};
     case "><x>":
-      button.onclick = "interpretDeadfish()";
+      button.onclick = function(){interpretDeadfish()};
     case "pp":
-      button.onclick = "interpretpP()";
+      button.onclick = function(){interpretpP();}
   }
   document.body.appendChild(text);
   document.body.appendChild(document.createElement("br"));
