@@ -109,7 +109,7 @@ input[type="text"], textarea {
 
  button.plain {
   background-color: #333; 
-  border: 3px solid #ddd;
+  border: 1px solid #ddd;
   color: #ddd;
   padding: 15px 32px;
   text-align: center;
