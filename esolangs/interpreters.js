@@ -198,7 +198,7 @@ function interpretDeadfish() {
         output +=  "\n" + idx.toString();
         break;
       case "s":
-        idx = idx**2;
+        idx = Math.pow(idx, 2);
         break;
     }
   }
