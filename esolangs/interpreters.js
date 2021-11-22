@@ -180,33 +180,25 @@ function interpretpP() {
 
 function interpretDeadfish() {
   var program = document.getElementById("><x>-in").value;
-  var accum = 0;
+  var idx = 0;
   var output = "";
-  var quit = false;
 
-  for (var i = 0; i < program.length - 1; i++) {
-    if (quit) {
-      break;
-    }
+  for (var i = 0; i <= program.length - 1; i++) {
     switch (program[i]) {
       case "i":
         //increment
-        accum++;
+        idx++;
         break;
       case "d":
         //decrement
-        accum--;
-        break;
-      case "h":
-        //halt
-        quit = true;
+        idx--;
         break;
       case "o":
         //output
-        output +=  "\n" + accum.toString();
+        output +=  "\n" + idx.toString();
         break;
       case "s":
-        accum = acuum**2;
+        accum = idx**2;
         break;
     }
   }
