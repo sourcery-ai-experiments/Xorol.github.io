@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width">
 	<link href="/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 	<script src="../interpreters.js" defer></script>
 </head>
 
@@ -34,12 +33,23 @@
   </div></div>
     <h1>Interpreters</h1>
     <p>Here you can find a collection of my interpreters (code that runs other code) for <a href="esolangs.html" class="plain">esolangs.</a> Just select your language, put your code in the box, and hit "Interpret".</p>
-    <label for="language">Choose the language to interpret:</label>
-    <select id="language" name="language">
-      <option selected>Choose a language...</option>
-      <option value="numbers">Numbers</option>
-      <option value="><x>">&gt;&lt;x&gt; (Deadfish)</option>
-      <option value="pp">pP</option>
-    </select><br><br>
+    <details>
+	    <summary>&gt;&lt;x&gt; (Deadfish)</summary>
+	    <textarea placeholder="Deadfish code here..." cols=250 rows=4 id="><x>-in"></textarea><br>
+	    <button onclick="interpretDeadfish()" class="plain">Interpret!</button><br>
+	    <p id="><x>-out">Output here...</p>
+    <details>
+    <details>
+	    <summary>Numbers</summary>
+	    <textarea placeholder="Numbers code here..." cols=250 rows=4 id="numbers-in"></textarea><br>
+	    <button onclick="interpretNumbers()" class="plain">Interpret!</button><br>
+	    <p id="numbers-out">Output here...</p>
+    <details>
+    <details>
+	    <summary>pP</summary>
+	    <textarea placeholder="pP code here..." cols=250 rows=4 id="pp-in"></textarea><br>
+	    <button onclick="interpretpP()" class="plain">Interpret!</button><br>
+	    <p id="pp-out">Output here...</p>
+    <details>
   </body>
 </html>
