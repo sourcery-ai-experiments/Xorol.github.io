@@ -198,7 +198,7 @@ function interpretDeadfish() {
         output +=  "\n" + idx.toString();
         break;
       case "s":
-        accum = idx**2;
+        idx = idx**2;
         break;
     }
   }
