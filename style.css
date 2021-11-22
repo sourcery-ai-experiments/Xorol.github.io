@@ -126,3 +126,27 @@ blockquote {
 blockquote p {
   display: inline;
 }
+
+details {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+  	background-color: #333;
+  	color: #ddd;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: .5em;
+}
+
