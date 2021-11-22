@@ -196,6 +196,7 @@ function interpretDeadfish() {
       case "d":
         //decrement
         accum--;
+        break;
       case "h":
         //halt
         quit = true;
@@ -205,41 +206,9 @@ function interpretDeadfish() {
         output +=  "\n" + accum.toString();
         break;
       case "s":
-        accum ^= 2;
+        accum = acuum**2;
         break;
     }
   }
   document.getElementById("><x>-out").innerHTML = output;
 }
-
-$("select").change(function(){
-  const language = $(this).val();
-  const text = document.createElement("textarea");
-  text.id = language + "-in";
-  text.placeholder = "Code here...";
-  text.cols = 250;
-  text.rows = 4;
-  const button = document.createElement("button")
-  button.id = "plain";
-  button.innerHTML = "Interpret!";
-  button.classList.add("plain");
-  const output = document.createElement("p");
-  output.innerHTML = "Output here...";
-  output.id = language + "-out";
-  switch (language) {
-    case "numbers":
-      button.onclick = function(){interpretNumbers()};
-      break;
-    case "><x>":
-      button.onclick = function(){interpretDeadfish()};
-      break;
-    case "pp":
-      button.onclick = function(){interpretpP();}
-      break;
-  }
-  document.body.appendChild(text);
-  document.body.appendChild(document.createElement("br"));
-  document.body.appendChild(button);
-  document.body.appendChild(document.createElement("br"));
-  document.body.appendChild(output);
-});
