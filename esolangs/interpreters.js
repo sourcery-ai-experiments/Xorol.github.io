@@ -147,7 +147,7 @@ function interpretNumbers() {
         break;
       case "42":
         //goto
-        pointer = parseInt(program[pointer + 1]);
+        pointer = parseInt(program[pointer++]) - 1;
         break;
       case "43":
         pointer = 0;
