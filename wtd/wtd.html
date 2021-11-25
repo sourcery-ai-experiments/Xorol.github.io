@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>What's the difference?</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="topnav">
+		<a href="../index.html">Home</a>
+		<div class="dropdown">
+			<form action="https://xorol.github.io/esolangs/esolangs.html">
+			<button class="dropbtn" type="submit">
+      <i class="fa fa-caret-down"> Esolangs</i>
+				</button></form>
+    <div class="dropdown-content">
+      <a href="../esolangs/numbers.html">Numbers</a>
+      <a href="../esolangs/interpreters/interpreters.html">Interpreters</a>
+      <a href="../esolangs/wips.html">WIPs</a>
+    </div>
+  </div>
+	<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"> Other things I made</i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../noise/noise.html">Noise</a>
+      <a href="#" class="active">What's the difference?</a>
+    </div>
+  </div>	</div>
+    <h1>What's the difference?</h1>
+    <p>What's the difference? is a program that when given two date-times, calculates the difference between them in seconds.</p>
+      <label for="date1">First date and time:</label>
+      <input type="date" id="date1">
+      <input type="time" id="time1" step="2"><br>
+      <label for="date2">Second date and time:</label>
+      <input type="date" id = "date2">
+      <input type="time" id="time2" step="2"><br>
+      <input type="submit" onclick="dates()" class="plain"><br>
+      <p id="output"></p>
+    <script src="date.js">
+    </script>
+  </body>
+</html>
