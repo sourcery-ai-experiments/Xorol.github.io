@@ -107,7 +107,7 @@ input[type="text"], textarea {
   max-width: 95%;
 }
 
- button.plain {
+ button.plain, input[type="submit"].plain{
   background-color: #333; 
   border: 1px solid #ddd;
   color: #ddd;
@@ -116,6 +116,11 @@ input[type="text"], textarea {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+button.plain:hover, input[type="submit"].plain:hover {
+  background-color: #444;
+  cursor: pointer;
 }
 
 blockquote {
@@ -149,4 +154,3 @@ details[open] summary {
     border-bottom: 1px solid #ddd;
     margin-bottom: .5em;
 }
-
