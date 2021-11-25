@@ -10,5 +10,6 @@ function dates() {
     document.getElementById("output").innerHTML = "You missed a field or two!";
     return;
   }
-  document.getElementById("output").innerHTML = Math.abs((unix1 - unix2)/1000).toString().split("").reverse().join("").match(/.{1,3}/g).reverse().join(",");
+  const out = Math.abs(unix1 - unix2)/1000
+  document.getElementById("output").innerHTML = out.toString().split("").reverse().join("").match(/.{1,3}/g).reverse().join(",");
 }
