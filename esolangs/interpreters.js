@@ -236,7 +236,7 @@ function interpretSkound() {
         accumulator = parseInt(window.prompt("Enter a number:"));
         break;
       case "O":
-        document.getElementById("skound-out").innerHTML += " " + accumulator.toString();
+        document.getElementById("skound-out").innerHTML += " " + accumulator;
         break;
     }
     if (quit) {break;}
