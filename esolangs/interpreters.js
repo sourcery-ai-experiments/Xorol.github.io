@@ -211,3 +211,26 @@ function interpretStar() {
   if(code === " * ") document.getElementById("*-out").innerHTML = Math.random() * Number.MAX_VALUE;
   if(code === "*+*") while(true){}
 }
+
+function interpretL () {
+  const program = document.getElementById("l-in").value;
+  var accum1 = 0;
+  var accum2 = 0;
+  for (var i = 0; i < program.length - 1; i++) {
+    switch (program[i]) {
+      case "l":
+        accum1++;
+        break;
+      case "L":
+        accum2++;
+        break;
+      case "w":
+        accum1 = accum1 * accum2;
+        break;
+      case "\n":
+        document.getElementById("l-out").innerHTML += " " + String.fromCharCode(accum1);
+        accum1 = 0;
+        break;
+    }
+  }
+}
