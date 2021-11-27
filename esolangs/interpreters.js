@@ -205,42 +205,9 @@ function interpretDeadfish() {
   document.getElementById("><x>-out").innerHTML = output;
 }
 
-function interpretSkound() {
-  var program = document.getElementById("skound-in").value;
-  var stack = [];
-  var accumulator = 0;
-  var program_index = 0;
-  var quit = false;
-  while (true) {
-    switch (program[program_index]) {
-      case "+":
-        accumulator++;
-        break;
-      case "-":
-        accumulator--;
-        break;
-      case "0":
-        accumulator = 0;
-        break;
-      case "V":
-        stack.push(accumulator);
-        break;
-      case "^":
-        if (stack === []) {
-          quit = true;
-          break;
-        }
-        accumulator = stack.pop();
-        break;
-      case "I":
-        accumulator = parseInt(window.prompt("Enter a number:"));
-        break;
-      case "O":
-        document.getElementById("skound-out").innerHTML += " " + accumulator;
-        break;
-    }
-    if (quit) {break;}
-    program_index++;
-    program_index %= program.length;
-  }
+function interpretStar() {
+  var code=document.getElementById("*-in").value;
+  if(code === "*") document.getElementById("*-out").innerHTML = "Hello, world!";
+  if(code === " * ") document.getElementById("*-out").innerHTML = Math.random() * Number.MAX_VALUE;
+  if(code === "*+*") while(true){}
 }
