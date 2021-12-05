@@ -133,7 +133,7 @@ input[type="text"], textarea {
 }
 
 /*show that disabled textareas/buttons are disabled to the user*/
-textarea:disabled button:disabled {
+textarea:disabled{
   cursor: not-allowed;
 }
 
