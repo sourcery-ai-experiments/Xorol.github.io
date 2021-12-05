@@ -1,51 +1,60 @@
+/*Set variables (allows for easy control of colors and such)*/
+:root {
+  --white: #ddd;
+  --dark: #222;
+  --medium: #333;
+  --light: #444;
+  --accent: #EA7200;
+  --light-accent: #FB8200;
+  --shadow: 0em .5em 1em 0em rgba(0,0,0,0.2);
+}
+/*Nav menu*/
 .topnav {
-  background-color: #333;
+  background-color: var(--medium);
   overflow: hidden;
 }
 
+/*links in nav menu*/
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: var(--white);
   text-align: center;
-  padding: 14px 16px;
+  padding: .875em 1em;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.0625em;
 }
 
 .topnav a:hover {
-  background-color: #444;
-  color: #ddd;
+  background-color: var(--light);
+  color: var(--white);
 }
 
 .topnav a.active {
   background-color: #EA7200;
-  color: #ddd;
+  color: var(--white);
 }
 
 .topnav a:hover.active {
   background-color: #FB8200;
 }
 
-body {
-  background-color: #222;
-  color: #ddd;
+/*Hide bars icon*/
+.topnav i.fa-bars {
+  display: none;
 }
 
-a.plain {
-  color: #FFA200;
-}
-
+/*Dropdown styling*/
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 1em;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  color: var(--white);;
+  padding: .875em 1em;
   background-color: inherit;
   font-family: inherit;
   margin: 0; 
@@ -54,41 +63,54 @@ a.plain {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: var(--medium);
+  min-width: 10em;
+  box-shadow: var(--shadow);
   z-index: 1;
-}
-
-.active-dropbtn {
-  background-color: #EA7200;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  font-family: inherit;
-  margin: 0; 
-}
-
-.dropdown-content a {
-  float: none;
-  color: #ddd;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #444;
-  color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+.active-dropbtn {
+  background-color: var(--accent);
+  font-size: 1em;
+  border: none;
+  outline: none;
+  color: var(--white);
+  padding: .875em 1em;
+  font-family: inherit;
+  margin: 0; 
+}
+
+/*links in the dropdowns*/
+.dropdown-content a {
+  float: none;
+  color: var(--white);
+  padding: .875em 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--light);
+  color: var(--white);;
+}
+
+/*body*/
+body {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+/*links*/
+a.plain {
+  color: var(--light-accent);
+}
+
+/*table styling*/
 table {
   border-collapse: collapse;
   width: 100%;
@@ -96,48 +118,60 @@ table {
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: .5px;
 }
 
-tr:nth-child(even) {background-color: #333;}
+/*add alternatingly colored rows to tables*/
+tr:nth-child(even) {
+  background-color: var(--medium);
+}
 
 input[type="text"], textarea {
-  background-color: #333;
-  color: #ddd;
+  background-color: var(--medium);
+  color: var(--white);
   max-width: 95%;
 }
 
- button.plain, input[type="submit"].plain{
-  background-color: #333; 
-  border: 1px solid #ddd;
-  color: #ddd;
-  padding: 15px 32px;
+/*show that disabled textareas/buttons are disabled to the user*/
+textarea:disabled button:disabled {
+  cursor: not-allowed;
+}
+
+/*button styling*/
+button.plain, input[type="submit"].plain{
+  background-color: var(--medium); 
+  border: .0625em solid var(--white);
+  color: var(--white);
+  padding: .9375em 2em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 button.plain:hover, input[type="submit"].plain:hover {
-  background-color: #444;
+  background-color: var(--light);
   cursor: pointer;
 }
 
+/*blockquote styling*/
 blockquote {
-  border-left: 10px solid #333;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  border-left: .625em solid var(--medium);
+  margin: 1.5em .625em;
+  padding: .5em .625em;
 }
+
 blockquote p {
   display: inline;
 }
 
+/*clicky-like dropdown styling*/
 details {
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: .0625em solid var(--white);
+    border-radius: .25em;
     padding: .5em .5em 0;
-  	background-color: #333;
-  	color: #ddd;
+  	background-color: var(--medium);
+  	color: var(--white);
 }
 
 summary {
@@ -146,11 +180,12 @@ summary {
     padding: .5em;
 }
 
+/*open click-like dropdown styling*/
 details[open] {
     padding: .5em;
 }
 
 details[open] summary {
-    border-bottom: 1px solid #ddd;
+    border-bottom: .0625em solid var(--white);
     margin-bottom: .5em;
 }
