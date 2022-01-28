@@ -80,6 +80,7 @@ switch (window.location.href) {
 }
 esolangsContents.appendChild(numbers);
 esolangsContents.appendChild(wips);
+esolangsContents.appendChild(interpreters);
 esolangs.appendChild(esolangsContents);
 
 otherContents.appendChild(noise);
