@@ -49,6 +49,11 @@ starcalc.href = "https://xorol.github.io/starcalc/starcalc.html";
 starcalc.innerText = "Star calculator";
 
 
+let tsevhu = document.createElement("a");
+tsevhu.href = "https://xorol.github.io/tsevhu/tsevhu.html";
+tsevhu.innerText = "Tsevhu"
+
+
 switch (window.location.href) {
   case "https://xorol.github.io":
   case "https://xorol.github.io/index.html":
@@ -69,6 +74,8 @@ switch (window.location.href) {
   case "https://xorol.github.io/other/starcalc/starcalc.html":
     starcalc.classList = ["active"];
     break;
+  case "https://xorol.github.io/tsevhu/tsevhu.html":
+    tsevhu.classList = ["active"];
 
 }
 esolangsContents.appendChild(numbers);
@@ -84,3 +91,4 @@ topnav.appendChild(link);
 topnav.appendChild(home);
 topnav.appendChild(esolangs);
 topnav.appendChild(other);
+topnav.appendChild(tsevhu);
