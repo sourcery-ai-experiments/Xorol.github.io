@@ -50,7 +50,7 @@ starcalc.innerText = "Star calculator";
 
 
 let tsevhu = document.createElement("a");
-tsevhu.href = "https://xorol.github.io/tsevhu/tsevhu.html";
+tsevhu.href = "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/";
 tsevhu.innerText = "Tsevhu"
 
 
@@ -74,7 +74,7 @@ switch (window.location.href) {
   case "https://xorol.github.io/other/starcalc/starcalc.html":
     starcalc.classList = ["active"];
     break;
-  case "https://xorol.github.io/tsevhu/tsevhu.html":
+  case "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/":
     tsevhu.classList = ["active"];
 
 }
