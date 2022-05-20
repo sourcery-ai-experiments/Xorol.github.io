@@ -51,7 +51,11 @@ starcalc.innerText = "Star calculator";
 
 let tsevhu = document.createElement("a");
 tsevhu.href = "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/";
-tsevhu.innerText = "Tsevhu"
+tsevhu.innerText = "Tsevhu";
+
+let rushk = document.createElement("a");
+rushk.href = "https://xorol.github.io/rushk";
+rushk.innerText = "Rushk"
 
 
 switch (window.location.href) {
@@ -76,6 +80,8 @@ switch (window.location.href) {
     break;
   case "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/":
     tsevhu.classList = ["active"];
+  case "https://xorol.github.io/rushk":
+    rushk.classList = ["active"];
 
 }
 esolangsContents.appendChild(numbers);
@@ -93,3 +99,4 @@ topnav.appendChild(home);
 topnav.appendChild(esolangs);
 topnav.appendChild(other);
 topnav.appendChild(tsevhu);
+topnav.appendChild(rushk);
