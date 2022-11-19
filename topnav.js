@@ -65,7 +65,7 @@ rushk.href = "https://xorol.github.io/rushk";
 rushk.innerText = "Rushk";
 
 let addDictRushk = document.createElement("a");
-addDictRushk.href = "https://xorol.githuv.io/rushk-add-dict.html";
+addDictRushk.href = "https://xorol.github.io/rushk-add-dict.html";
 addDictRushk.innerText = "Adding dictionaries";
 
 switch (window.location.href) {
@@ -94,7 +94,7 @@ switch (window.location.href) {
   case "https://xorol.github.io/rushk":
     rushk.classList = ["active"];
     break;
-  case "https://xorol.githuv.io/rushk-add-dict.html":
+  case "https://xorol.github.io/rushk-add-dict.html":
     addDictRushk.classList = ["active"];
     break;
 
