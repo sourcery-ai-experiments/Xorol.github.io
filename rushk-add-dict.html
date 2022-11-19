@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>How to add a dictionary to Rushk</title>
+  <link href="https://xorol.github.io/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Adding dictionaries to Rushk</h1>
+  <details>
+    <summary>Step ɪ: Making sure it's in the right order</summary>
+    <p>The columns of your dictionary should be in this order (from left to right): word in your language, IPA, part of
+    speech, definition, notes. Rushk will not consider any further columns.</p>
+  <details>
+    <summary>Why do I need to do this?</summary>
+    <p>The reason that you need to do this is because if you don't, Rushk may not format your words correctly. Imagine
+      searching for a word and getting this:</p>
+    <p><strong>risca</strong> /verb/<br><i>ʀɪskə</i>. A dangerous situation</p>
+    <p>Terrible, right? But if you put the columns in the correct order, your word will come out correctly:</p>
+    <p><strong>risca</strong> /ʀɪskə/<br><i>verb</i>. A dangerous situation</p>
+  </details>
+  </details>
+  <details>
+    <summary>Step ɪɪ: Replace your commas with semicolons</summary>
+    <p>You'll need to replace all the commas with semicolons. First, go to the sheet with all your words on it. Then, press ᴄᴛʀʟ+f and you should see something like this in the top-right corner</p>
+  <img src="assets/image-1.png">
+  <p>Click the three dots stacked on top of each other to the right, and you'll see a modal like this</p>
+  <img src="assets/image-2.png">
+  <p>In the part where it says "Find" put a comma (,), and below it, in the "Replace with" field, put a semicolon (;). Then, just below that in the dropdown, select "This sheet" and at the bottom, click "Replace all."</p>
+  <details>
+    <summary>Why do I need to do this?</summary>
+    <p>Rushk stores your dictionaries in ᴄꜱᴠ-type files, which means that each bit of information is seperated by commas. An example word would look like this:</p>
+    <code>risca,ʀɪskə,verb,A dangerous situation</code>
+    <p>But, if you were to put a comma in one of the fields, Rushk thinks a new field is starting, and could cut off part of your definition:</p>
+    <code>risca,ʀɪskə,verb,A dangerous situation, especially if the threat is omnipresent</code>
+    <p><strong>risca</strong> /ʀɪskə/<br><i>verb</i>. A dangerous situation</p>
+    <p>Or worse, it could cause a ripple effect:</p>
+    <code>risca,ʀɪskə,verb, strong, A dangerous situation</code>
+    <p><strong>risca</strong> /ʀɪskə/<br><i>verb</i>. strong</p>
+  </details>
+  </details>
+  <details>
+    <summary>Step ɪɪɪ: Convert your sheet to a ᴄꜱᴠ file</summary>
+    <p>Because Rushk stores your dictionaries in ᴄꜱᴠ-type files, you will need to convert yours to ᴄꜱᴠ. Luckily, Google Sheets has this as a built-in feature. To access it, go to the toolbar just below your sheet's title and select "File," then, go down to "Download" and select "Comma seperated values (.csv)." And it'll be downloaded on your computer as ᴄꜱᴠ.</p>
+  </details>
+  <details><summary>Step ɪᴠ: Send it to me</summary><p>The last step is to send the ᴄꜱᴠ file to me (hopefully if you're reading this then you have some way of contacting me, if not, why are you here?)</p></details>
+  <script src="https://xorol.github.io/topnav.js"></script>
+</body>
+
+</html>
