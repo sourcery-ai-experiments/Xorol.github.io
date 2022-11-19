@@ -53,10 +53,20 @@ let tsevhu = document.createElement("a");
 tsevhu.href = "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/";
 tsevhu.innerText = "Tsevhu";
 
+let rushkDpd = document.createElement("div");
+rushkDpd.classList = ["dropdown"];
+rushkDpd.innerHTML = "<button class=\"dropbtn\"><i class=\"fa fa-caret-down\"> Rushk</i></button>";
+
+let rushkDpdContents = document.createElement("div");
+rushkDpdContents.classList = ["dropdown-content"];
+
 let rushk = document.createElement("a");
 rushk.href = "https://xorol.github.io/rushk";
-rushk.innerText = "Rushk"
+rushk.innerText = "Rushk";
 
+let addDictRushk = document.createElement("a");
+addDictRushk.href = "https://xorol.githuv.io/rushk-add-dict.html";
+addDictRushk.innerText = "Adding dictionaries";
 
 switch (window.location.href) {
   case "https://xorol.github.io":
@@ -80,8 +90,13 @@ switch (window.location.href) {
     break;
   case "https://ab538322-bb07-482b-b4c5-1bdbfd9c77b0.id.repl.co/":
     tsevhu.classList = ["active"];
+    break;
   case "https://xorol.github.io/rushk":
     rushk.classList = ["active"];
+    break;
+  case "https://xorol.githuv.io/rushk-add-dict.html":
+    addDictRushk.classList = ["active"];
+    break;
 
 }
 esolangsContents.appendChild(numbers);
@@ -94,9 +109,13 @@ otherContents.appendChild(wtd);
 otherContents.appendChild(starcalc);
 other.appendChild(otherContents);
 
+rushkDpdContents.appendChild(rushk);
+rushkDpdContents.appendChild(addDictRushk);
+rushkDpd.appendChild(rushkDpdContents);
+
 topnav.appendChild(link);
 topnav.appendChild(home);
 topnav.appendChild(esolangs);
 topnav.appendChild(other);
+topnav.appendChild(rushkDpd);
 topnav.appendChild(tsevhu);
-topnav.appendChild(rushk);
