@@ -32,7 +32,7 @@
 	<p>Don't be worried by that title, these are just commands that do things to the actual stack or the order of the items in the stack.</p>
 	<table>
     <tr><th>Command</th><th>Action</th></tr>
-    <tr><td>20</td><td>Pushes its following value onto the stack</td></tr>
+    <tr><td>20</td><td>Pushes its following value onto the stack. This command also has an alias: *. Prepend it to a number to push it to the the stack—e.x.: *5 which pushes 5 to the stack and is the same as 20 5 but shorter.</td></tr>
       <tr><td>21</td><td>Reverses the stack</td></tr>
         <tr><td>22</td><td>Swaps the top two values on the stack</td></tr>
           <tr><td>23</td><td>Discards the top value on the stack</td></tr>
@@ -59,12 +59,14 @@
     <tr><td>40</td><td>Only does the next instruction if the Control Accumulator is not 0</td></tr>
       <tr><td>41</td><td>Only does the next instruction if the Control Accumulator is 0</td></tr>
         <tr><td>42</td><td>Goto</td></tr>
-          <tr><td>43</td><td>Repeats the program</td></tr>
+          <tr><td>44</td><td>Declares functions</td></tr>
+		<tr><td>45</td><td>Takes the top value off the stack and treats it as a function, then applies that function to each following number, pushing the results to the stack until finding a closing 45</td></tr>
+		<tr><td>46</td><td>Loads modules</td></tr>
 		<tr><td>~</td><td>Halts/Ends the program</td></tr>
   </table>
 	<h2>Why am I still Confused?</h2>
 	<p>That's OK, these sorts of languages are designed to be confusing and downright weird, but it's for fun. I'll give you some example programs. Just copy-past them into the code-runner below</p>
-	<blockquote><p>A program that outputs "Hello, world!":<br>20 72 20 101 20 108 20 108 20 111 20 32 20 87 20 111 20 114 20 108 20 100 20 33 33<br></p></blockquote>
+	<blockquote><p>A program that outputs "Hello, world!":<br>*20 45 72 101 108 108 111 32 87 111 114 108 100 33 45 33<br></p></blockquote>
 	<blockquote><p>This one repeats what you say<br>36 33<br></p></blockquote>
 	<blockquote><p>And the last one is a simple adder that will ask for two addends and output their sum:<br>34 34 10 30</p></blockquote>
 	<h2>The Interpreter: code that runs code</h2>
@@ -72,5 +74,6 @@
 	<textarea placeholder="Numbers code here..." cols=250 rows=4 id="numbers-in"></textarea><br>
 	<button onclick="interpretNumbers()" class="plain">Interpret!</button><br>
 	<p id="numbers-out">Output here...</p>
+	<script href="https://xorol.github.io/topnav.js"></script>
 </body>
 </html>
