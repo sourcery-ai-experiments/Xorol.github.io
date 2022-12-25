@@ -45,7 +45,7 @@ wtd.href = "https://xorol.github.io/other/wtd/wtd.html";
 wtd.innerText = "What's the difference?";
 
 let starcalc = document.createElement("a");
-starcalc.href = "https://xorol.github.io/starcalc/starcalc.html";
+starcalc.href = "https://xorol.github.io/other/starcalc/starcalc.html";
 starcalc.innerText = "Star calculator";
 
 
